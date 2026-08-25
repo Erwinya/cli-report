@@ -1,0 +1,45 @@
+{
+  "title": "Line A — morning inspection",
+  "results": [
+    {
+      "lot_id": "LOT-1001",
+      "check": "thickness_um",
+      "status": "pass",
+      "value": "100.8",
+      "limit": "95-105",
+      "note": "within band"
+    },
+    {
+      "lot_id": "LOT-1001",
+      "check": "resistance_ohm",
+      "status": "pass",
+      "value": "12.1",
+      "limit": "11-13",
+      "note": ""
+    },
+    {
+      "lot_id": "LOT-1002",
+      "check": "thickness_um",
+      "status": "hold",
+      "value": "97.9",
+      "limit": "95-105",
+      "note": "near lower edge"
+    },
+    {
+      "lot_id": "LOT-1002",
+      "check": "resistance_ohm",
+      "status": "fail",
+      "value": "20.5",
+      "limit": "11-13",
+      "note": "open NCR"
+    },
+    {
+      "lot_id": "LOT-1003",
+      "check": "visual",
+      "status": "skip",
+      "value": "",
+      "limit": "",
+      "note": "station offline"
+    }
+  ]
+}
