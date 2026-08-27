@@ -171,6 +171,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-progress", action="store_true", help="Skip intro progress animation")
     args = p.parse_args(argv)
 
+    if not args.file.is_file():
+        raise SystemExit(f"file not found: {args.file}")
+
     enabled = not args.no_color and sys.stdout.isatty()
     file_title, raw_rows = load_rows(args.file)
     rows = [normalize(r) for r in raw_rows]

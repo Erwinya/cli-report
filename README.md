@@ -18,6 +18,8 @@ Options:
 
 Exit codes: `0` pass, `1` fail, `2` hold.
 
+Requires **Python 3.10+**. Sample fixture: `samples/inspection.json`.
+
 ## License
 
 MIT
