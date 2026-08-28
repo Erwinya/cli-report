@@ -5,6 +5,7 @@ Thumbs.db
 .cursor/
 __pycache__/
 *.pyc
+*.egg-info/
 .venv/
 venv/
 *.log
