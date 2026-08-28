@@ -10,6 +10,20 @@ Inspired by rich console libraries (tables, status colors, progress) — stdlib 
 python src/cli_report.py -f samples/inspection.json
 ```
 
+Install locally (optional):
+
+```bash
+pip install -e .
+cli-report -f samples/inspection.json
+```
+
+## Development
+
+```bash
+pip install -e ".[dev]"
+pytest
+```
+
 Options:
 
 - `--no-color` — plain text output
