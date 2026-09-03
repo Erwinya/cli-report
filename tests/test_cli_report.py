@@ -72,3 +72,25 @@ def test_summary_includes_skip_count(capsys) -> None:
     cli_report.summary(False, rows)
     output = capsys.readouterr().out
     assert "skip=1" in output
+
+
+def test_main_title_override(tmp_path: Path, capsys) -> None:
+    path = tmp_path / "rows.json"
+    path.write_text(
+        json.dumps(
+            {
+                "title": "File title",
+                "results": [{"status": "pass", "lot_id": "L1", "check": "x"}],
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert (
+        cli_report.main(
+            ["-f", str(path), "--title", "CLI override", "--no-progress", "--no-color"]
+        )
+        == 0
+    )
+    output = capsys.readouterr().out
+    assert "CLI override" in output
+    assert "File title" not in output
